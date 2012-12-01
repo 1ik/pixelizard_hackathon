@@ -1,0 +1,35 @@
+.dhaka{
+    position: absolute;
+    
+}
+
+h1{
+    margin-left: 360px;
+}
+
+.info{
+    margin-left: 500px;
+}
+
+h2{
+     margin-left: 520px;
+}
+
+span{
+    font-family: Consolas;
+    font-weight: 400;
+}
+
+.map{
+    margin: 0;
+    padding:0;
+    margin-left: 400px;
+    border-bottom: 2px solid green;
+}
+
+.img1{
+    position: absolute;
+}
+.img2{
+    position: absolute;
+}

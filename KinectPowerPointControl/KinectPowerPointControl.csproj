@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9679A6CD-3B32-4B9C-9C0B-989EE1C070E1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KinectPowerPointControl</RootNamespace>
+    <AssemblyName>KinectPowerPointControl</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Kinect, Version=1.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Kinect\v1.6\Assemblies\Microsoft.Kinect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Speech, Version=11.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.6.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.6.4\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="DataConnection.cs" />
+    <Compile Include="Win32.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Readme.txt">
+      <Link>Readme.txt</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\63.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\128px-AoL_Sword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\300-Spartan-Shield-psd5469.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rightHand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\leftHand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\left_hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\right_hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\basin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\hawaiChappal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\toilet-clip-art1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bar_Soap_Clip_Art.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\toilet-flush.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tissue-paper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\toilet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sandals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\door_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\02.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tissue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Toilet1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\door_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tissue paper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Soap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\tissue1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\t_tissue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Soap1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sink1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\flush.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\flush1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\new_door.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
